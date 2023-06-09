@@ -3,6 +3,8 @@ import { MovieProps, GenreResponseProps } from "../types/DataProps";
 import { MovieCard } from "./MovieCard";
 import { Header } from "./Header";
 
+import '../styles/content.scss';
+
 interface ContentProps{
   movies: MovieProps[],
   selectedGenre: GenreResponseProps; 
@@ -12,7 +14,7 @@ export function Content({movies, selectedGenre}: ContentProps) {
 
   return (
     <div className="container">
-      
+
         <Header title={selectedGenre.title} />
 
         <main>

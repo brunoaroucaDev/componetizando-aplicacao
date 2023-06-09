@@ -3,13 +3,13 @@ import { Button } from './Button';
 import { api } from '../services/api';
 import { GenreResponseProps } from '../types/DataProps';
 
+import '../styles/sidebar.scss';
+
 interface SideBarProps {
   genres: GenreResponseProps[],
   handleClickButton: (id: number) => void,
   selectedGenreId: number
-
 }
-
 
 export function SideBar( {genres, handleClickButton, selectedGenreId}: SideBarProps ) {
   return (
@@ -27,7 +27,6 @@ export function SideBar( {genres, handleClickButton, selectedGenreId}: SideBarPr
             />
           ))}
         </div>
-
       </nav> 
   );
 }
